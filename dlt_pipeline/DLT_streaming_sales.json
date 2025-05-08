@@ -1,0 +1,38 @@
+{
+    "id": "cc9a8b20-2a17-11f0-8111-00163e5fb1b0",
+    "sequence": {
+        "data_plane_id": {
+            "instance": "execution",
+            "seq_no": 1746494161839013
+        },
+        "control_plane_seq_no": 1746494215581008
+    },
+    "origin": {
+        "cloud": "Azure",
+        "region": "canadacentral",
+        "org_id": 474530347585855,
+        "pipeline_id": "b1431020-0a65-4a29-ac24-5010457489d3",
+        "pipeline_type": "WORKSPACE",
+        "pipeline_name": "pl_streaming_data_to_silver",
+        "cluster_id": "0506-011213-5e8o7b5z",
+        "update_id": "3218d7f0-2c9a-4616-ac79-5d42de1af528",
+        "flow_id": "e2bffd87-3878-4c6c-927c-e054870afaca",
+        "flow_name": "streaming_data.streaming_sales",
+        "request_id": "3218d7f0-2c9a-4616-ac79-5d42de1af528",
+        "source_code_location": {
+            "path": "/Users/savan4166@gmail.com/real_time_ai_de_project/auto_ingestion_layer   /01_streaming_to_silver",
+            "line_number": 1,
+            "notebook_cell_number": 3
+        }
+    },
+    "timestamp": "2025-05-06T01:16:55.378Z",
+    "message": "Flow 'streaming_data.streaming_sales' has COMPLETED.",
+    "level": "INFO",
+    "details": {
+        "flow_progress": {
+            "status": "COMPLETED"
+        }
+    },
+    "event_type": "flow_progress",
+    "maturity_level": "STABLE"
+}
