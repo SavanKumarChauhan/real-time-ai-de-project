@@ -1,0 +1,52 @@
+resources:
+  jobs:
+    Unified_Workflow_Job:
+      name: Unified_Workflow_Job
+      tasks:
+        - task_key: DLT_streaming_data
+          pipeline_task:
+            pipeline_id: b1431020-0a65-4a29-ac24-5010457489d3
+            full_refresh: false
+        - task_key: task_ingest_batch_data
+          notebook_task:
+            notebook_path: /Workspace/Users/savan4166@gmail.com/real_time_ai_de_project/03_data_ingestion/01_batch_ingestion_bronze_to_silver
+            source: WORKSPACE
+          existing_cluster_id: 0505-190308-q40eqnor
+        - task_key: batch_and_stream_processing
+          depends_on:
+            - task_key: DLT_streaming_data
+            - task_key: task_ingest_batch_data
+          notebook_task:
+            notebook_path: /Workspace/Users/savan4166@gmail.com/real_time_ai_de_project/04_gold_layer_creation/01_batch_and_stream_processing
+            source: WORKSPACE
+          existing_cluster_id: 0505-190308-q40eqnor
+        - task_key: optimize_gold_and_create_view
+          depends_on:
+            - task_key: batch_and_stream_processing
+          notebook_task:
+            notebook_path: /Workspace/Users/savan4166@gmail.com/real_time_ai_de_project/04_gold_layer_creation/02_gold_optimization_and_view
+            source: WORKSPACE
+          existing_cluster_id: 0505-190308-q40eqnor
+        - task_key: gpt_summary
+          depends_on:
+            - task_key: optimize_gold_and_create_view
+          notebook_task:
+            notebook_path: /Workspace/Users/savan4166@gmail.com/real_time_ai_de_project/05_ai_insights_layer/01_gpt_summary_generator
+            base_parameters:
+              spark.store_id: ""
+              spark.category: ""
+            source: WORKSPACE
+          existing_cluster_id: 0505-190308-q40eqnor
+        - task_key: update_dashboard
+          depends_on:
+            - task_key: gpt_summary
+          notebook_task:
+            notebook_path: /Workspace/Users/savan4166@gmail.com/real_time_ai_de_project/analytics_layer/03_realtime_dashboard
+            source: WORKSPACE
+          existing_cluster_id: 0505-190308-q40eqnor
+      git_source:
+        git_url: https://github.com/SavanKumarChauhan/real-time-ai-de-project.git
+        git_provider: gitHub
+        git_commit: main
+      queue:
+        enabled: true
