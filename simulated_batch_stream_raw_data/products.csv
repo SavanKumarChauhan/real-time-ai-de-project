@@ -1,0 +1,101 @@
+product_id,base_price,stock,category,product_name
+101,188.52,624,Electronics,Laptop
+102,475.46,913,Grocery,Pasta
+103,366.53,792,Clothing,Jeans
+104,300.13,290,Electronics,Smartwatch
+105,79.7,613,Electronics,Smartwatch
+106,79.69,145,Beverages,Coffee
+107,30.93,949,Electronics,Laptop
+108,433.36,783,Clothing,Jeans
+109,301.36,534,Household,Dishwasher Tablets
+110,354.62,456,Electronics,Smartwatch
+111,12.25,280,Clothing,Sweater
+112,485.02,798,Beverages,Tea
+113,416.56,704,Beverages,Energy Drink
+114,107.74,220,Grocery,Rice
+115,92.55,590,Clothing,Sneakers
+116,93.34,85,Grocery,Olive Oil
+117,153.51,574,Clothing,Jeans
+118,263.33,209,Grocery,Rice
+119,217.11,888,Electronics,Camera
+120,147.03,748,Electronics,Tablet
+121,306.7,292,Grocery,Eggs
+122,71.47,135,Grocery,Rice
+123,147.49,845,Beverages,Energy Drink
+124,184.45,627,Electronics,Camera
+125,229.12,731,Electronics,Smartwatch
+126,393.02,606,Grocery,Eggs
+127,101.44,623,Grocery,Eggs
+128,258.09,695,Clothing,T-shirt
+129,297.02,845,Electronics,Smartphone
+130,25.13,77,Grocery,Rice
+131,304.56,669,Clothing,T-shirt
+132,86.92,605,Beverages,Juice
+133,34.4,389,Beverages,Juice
+134,474.54,847,Clothing,Jacket
+135,482.88,380,Grocery,Pasta
+136,404.58,689,Grocery,Rice
+137,153.7,555,Household,Soap
+138,50.64,397,Household,Soap
+139,342.75,522,Clothing,Sneakers
+140,221.2,280,Beverages,Juice
+141,62.78,239,Household,Soap
+142,248.6,274,Grocery,Rice
+143,19.13,434,Clothing,T-shirt
+144,454.84,426,Grocery,Bread
+145,130.87,332,Grocery,Rice
+146,331.94,682,Clothing,Sweater
+147,157.23,677,Grocery,Pasta
+148,260.99,794,Beverages,Soda
+149,274.26,308,Beverages,Tea
+150,94.06,408,Grocery,Pasta
+151,484.85,759,Clothing,Sweater
+152,388.02,505,Household,Toilet Paper
+153,469.87,460,Household,Towel
+154,447.62,698,Household,Towel
+155,299.75,367,Grocery,Pasta
+156,461.09,726,Clothing,Sweater
+157,46.07,274,Beverages,Coffee
+158,99.6,868,Electronics,Laptop
+159,24.52,283,Clothing,Jeans
+160,164.01,733,Beverages,Energy Drink
+161,195.56,713,Electronics,Camera
+162,137.13,876,Beverages,Energy Drink
+163,414.71,423,Beverages,Energy Drink
+164,179.66,721,Grocery,Eggs
+165,141.91,657,Electronics,Laptop
+166,272.26,521,Household,Toilet Paper
+167,72.18,282,Grocery,Rice
+168,401.49,741,Grocery,Bread
+169,39.13,162,Clothing,Sneakers
+170,493.47,879,Electronics,Tablet
+171,386.58,546,Household,Soap
+172,100.96,491,Household,Detergent
+173,4.75,613,Grocery,Eggs
+174,408.1,317,Household,Soap
+175,354.01,559,Clothing,Jacket
+176,365.05,856,Clothing,Sweater
+177,386.09,435,Household,Detergent
+178,38.87,436,Household,Toilet Paper
+179,180.52,162,Beverages,Coffee
+180,59.7,662,Electronics,Tablet
+181,431.83,674,Grocery,Pasta
+182,312.4,130,Electronics,Smartphone
+183,166.79,748,Household,Detergent
+184,33.65,162,Electronics,Camera
+185,156.87,51,Electronics,Smartwatch
+186,163.94,691,Clothing,Jeans
+187,365.34,269,Beverages,Energy Drink
+188,319.5,615,Clothing,Jacket
+189,443.83,904,Household,Dishwasher Tablets
+190,237.16,785,Beverages,Tea
+191,61.56,274,Household,Soap
+192,357.2,434,Grocery,Bread
+193,380.87,452,Grocery,Bread
+194,281.52,687,Household,Towel
+195,385.94,179,Electronics,Smartphone
+196,247.91,102,Clothing,T-shirt
+197,262.32,733,Grocery,Rice
+198,214.92,779,Household,Dishwasher Tablets
+199,14.66,721,Clothing,Sweater
+200,55.73,759,Clothing,T-shirt
