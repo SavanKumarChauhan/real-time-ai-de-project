@@ -1,0 +1,43 @@
+{
+    "id": "b1431020-0a65-4a29-ac24-5010457489d3",
+    "pipeline_type": "WORKSPACE",
+    "clusters": [
+        {
+            "label": "default",
+            "node_type_id": "Standard_DS3_v2",
+            "driver_node_type_id": "Standard_DS3_v2",
+            "autoscale": {
+                "min_workers": 1,
+                "max_workers": 1,
+                "mode": "ENHANCED"
+            }
+        }
+    ],
+    "development": true,
+    "notifications": [
+        {
+            "email_recipients": [
+                "savan4166@gmail.com"
+            ],
+            "alerts": [
+                "on-update-failure",
+                "on-update-success"
+            ]
+        }
+    ],
+    "continuous": false,
+    "channel": "CURRENT",
+    "photon": false,
+    "libraries": [
+        {
+            "notebook": {
+                "path": "/Users/savan4166@gmail.com/real_time_ai_de_project/auto_ingestion_layer   /01_streaming_to_silver"
+            }
+        }
+    ],
+    "name": "pl_streaming_data_to_silver",
+    "edition": "CORE",
+    "storage": "/mnt/realtimedeai/silver/streaming/sales_transactions/",
+    "schema": "streaming_data",
+    "data_sampling": false
+}
