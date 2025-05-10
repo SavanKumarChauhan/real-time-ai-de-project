@@ -141,6 +141,7 @@ dbutils.secrets.get(scope="adls_scope", key="adls-client-secret")
 This project is orchestrated using a **Unified Databricks Job** that coordinates batch, streaming, AI, and dashboard tasks in sequence — just like an enterprise-grade data platform.
 
 ### 📌 Job: `Unified_Workflow_Job`
+![Unified_Workflow_Job](azure_resources_ss/unified_workflow_job.JPG)
 
 This job runs 6 key notebooks in order:
 
@@ -152,11 +153,12 @@ This job runs 6 key notebooks in order:
 6. `update_dashboard` → Final dashboard update using latest data + GPT summary
 
 📍 You can find the job here:  
-[`job_definitions/Unified_Workflow_Job`](job_definitions/Unified_Workflow_Job)
+[`job_definitions/Unified_Workflow_Job`](job_definitions/unified_workflow_job.json)
 
 ---
 
 ### 🔁 DLT Pipeline: `pl_streaming_data_to_silver`
+![DLT Pipeline](dlt_pipeline/PL_DLT.JPG)
 
 This Delta Live Tables (DLT) pipeline is responsible for:
 
@@ -165,10 +167,10 @@ This Delta Live Tables (DLT) pipeline is responsible for:
 - Writing clean output to the **Silver layer**
 
 📍 Defined inside:  
-[`auto_ingestion_layer/01_streaming_to_silver`](auto_ingestion_layer/01_streaming_to_silver)
+[`auto_ingestion_layer/01_streaming_to_silver`](real_time_ai_de_project/auto_ingestion_layer/01_streaming_to_silver.ipynb)
 
 📍 Pipeline definition:  
-[`dlt_pipeline/pl_streaming_data_to_silver`](dlt_pipeline/pl_streaming_data_to_silver)
+[`dlt_pipeline/pl_streaming_data_to_silver`](dlt_pipeline)
 
 ---
 
