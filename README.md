@@ -92,7 +92,7 @@ Below are the core notebooks used in the **Unified Workflow Job** — each playi
 
 | 📓 Notebook | 📂 Path | ⚙️ Description |
 |------------|---------|----------------|
-| `01_streaming_to_silver` | [`auto_ingestion_layer/01_streaming_to_silver`](real_time_ai_de_project/auto_ingestion_layer   /01_streaming_to_silver.ipynb) | Streaming sales ingestion via **DLT**, saves to Silver layer |
+| `01_streaming_to_silver` | [`auto_ingestion_layer/01_streaming_to_silver`](real_time_ai_de_project/auto_ingestion_layer/01_streaming_to_silver.ipynb) | Streaming sales ingestion via **DLT**, saves to Silver layer |
 | `01_batch_ingestion_bronze_to_silver` | [`03_data_ingestion/01_batch_ingestion_bronze_to_silver`](/03_data_ingestion/01_batch_ingestion_bronze_to_silver) | Ingests and transforms batch data (products, stores, promos, sales) to Silver |
 | `01_batch_and_stream_processing` | [`real_time_ai_de_project/01_batch_and_stream_processing`](/real_time_ai_de_project/01_batch_and_stream_processing) | Joins batch & stream Silver data → builds enriched Gold table |
 | `02_gold_optimization_and_view` | [`04_gold_layer_creation/02_gold_optimization_and_view`](/04_gold_layer_creation/02_gold_optimization_and_view) | Optimizes Gold layer and prepares SQL views |
