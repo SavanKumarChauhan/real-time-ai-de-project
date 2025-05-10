@@ -110,5 +110,30 @@ Below are the core notebooks used in the **Unified Workflow Job** — each playi
 > 🧪 **Note:** Other notebooks in the repo are for testing/debugging only — not part of the production pipeline.
 
 
+---
+
+## 🔐 Secure Access with Azure Key Vault
+
+This project follows security best practices by using **Azure Key Vault** + **Databricks Secret Scopes** to avoid hardcoding any secrets.
+
+### ✅ What We Secured
+
+| 🔑 Secret | 🔒 Stored In | 🔍 Used For |
+|-----------|--------------|-------------|
+| `adls-client-secret` | Azure Key Vault | Mounting ADLS Gen2 containers securely via OAuth |
+| `open-ai-api-key` | Azure Key Vault | Authenticating GPT-3.5 API for AI summaries |
+
+---
+
+### 🧭 How It Works
+
+1. **Azure Key Vault** holds all sensitive secrets
+2. A **Databricks Secret Scope** is configured to connect to the Key Vault
+3. Secrets are retrieved securely in notebooks via:
+```python
+dbutils.secrets.get(scope="adls_scope", key="adls-client-secret")
+
+
+
 
 
