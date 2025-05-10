@@ -177,6 +177,60 @@ This Delta Live Tables (DLT) pipeline is responsible for:
 > ✅ This fully automated workflow mimics how real-time pipelines are deployed at scale in top tech/data teams.
 
 
+---
+
+## 🚀 How to Run This Project
+
+Follow these steps to deploy and execute the real-time pipeline on your own Azure + Databricks environment.
+
+---
+
+### 1️⃣ Prerequisites
+
+- Azure Subscription
+- Databricks Premium Workspace
+- Azure Storage Account (ADLS Gen2 with Bronze, Silver, Gold containers)
+- Azure Key Vault (with ADLS key + OpenAI API key)
+- OpenAI API Key (GPT-3.5)
+
+---
+
+### 2️⃣ Setup & Configuration
+
+- Mount ADLS containers securely using notebook:  
+  [`real_time_ai_de_project/01_env_config`](real_time_ai_de_project/01_env_config.ipynb)
+
+- Create a Secret Scope in Databricks and link it to Azure Key Vault
+
+- Configure secrets:
+  - `adls-client-secret`
+  - `open-ai-api-key`
+
+---
+
+### 3️⃣ Pipeline Execution
+
+#### 📌 Run DLT Pipeline
+- Import pipeline:  
+  [`auto_ingestion_layer/01_streaming_to_silver`](real_time_ai_de_project/auto_ingestion_layer/01_streaming_to_silver.ipynb)
+- Use **DLT UI** to create pipeline: `pl_streaming_data_to_silver`
+
+#### 📌 Run Unified Job
+- Import notebooks in correct order
+- Define job: `Unified_Workflow_Job`
+- Add following tasks:
+  1. `DLT_streaming_data`
+  2. `task_ingest_batch_data`
+  3. `batch_and_stream_processing`
+  4. `optimize_gold_and_create_view`
+  5. `gpt_summary`
+  6. `update_dashboard`
+
+> 📊 Once completed, navigate to the **Dashboards** section to view live charts + GPT summary.
+
+---
+
+🧠 This setup simulates real-time pipelines and AI workflows — 100% cloud-native, secure, and production-ready.
 
 
 
