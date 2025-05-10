@@ -17,3 +17,32 @@ This open-source project showcases a **real-time, AI-enhanced data pipeline** bu
 - 📊 **Real-Time Sales Dashboard** inside Databricks
 - 🔐 **Enterprise-Grade Security** with Azure Key Vault + Secret Scopes
 - 📈 **Fully Orchestrated Pipeline** using Databricks Jobs + Delta Live Tables (DLT)
+
+---
+
+## 🧱 Project Architecture
+
+This project follows a modern **Lakehouse + AI design pattern** built on Databricks and Azure. Here's the high-level architecture:
+
+- 🔄 **Data Simulation**: Generates both batch and streaming Parquet files
+- 🧪 **Ingestion Layer**:
+  - Batch → Ingested via PySpark notebooks to Silver layer
+  - Streaming → Ingested using **Delta Live Tables (DLT)** and stored in Silver
+- 🧹 **Transformation Layer**: 
+  - Cleansed, validated, enriched in Silver
+  - Processed into Gold with analytics-ready columns
+- 🤖 **AI Insights Layer**: 
+  - Uses **OpenAI GPT-3.5** to summarize Gold data into natural language insights
+- 📊 **Visualization Layer**:
+  - Real-time Databricks dashboard (sales trends, categories, GPT summary)
+- 🔐 **Security Layer**:
+  - Azure Key Vault + Secret Scopes for secure mounting and key management
+- ⚙️ **Orchestration**:
+  - A Unified Databricks Job manages batch, streaming, AI, and dashboard end-to-end
+
+---
+
+### 📌 Architecture Diagram
+
+![Project Architecture](real_time_dashboard/Architecture Diagram.png)
+
