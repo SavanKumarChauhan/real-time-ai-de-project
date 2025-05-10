@@ -252,7 +252,7 @@ It covers:
 
 ### 💬 Questions? Feedback? Want to collaborate?
 
-Open an issue or connect with me on [LinkedIn](linkedin.com/in/savan-chauhan-321295275)
+Open an issue or connect with me on [LinkedIn](https://www.linkedin.com/in/savan-chauhan-321295275/)
 
 ---
 
