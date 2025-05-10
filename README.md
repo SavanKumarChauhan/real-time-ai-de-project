@@ -133,7 +133,7 @@ This project follows security best practices by using **Azure Key Vault** + **Da
 ```python   
 dbutils.secrets.get(scope="adls_scope", key="adls-client-secret")
 
-
+```
 ---
 
 ## 🧩 Workflow Orchestration: Databricks Jobs + DLT
