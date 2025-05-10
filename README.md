@@ -130,8 +130,49 @@ This project follows security best practices by using **Azure Key Vault** + **Da
 1. **Azure Key Vault** holds all sensitive secrets
 2. A **Databricks Secret Scope** is configured to connect to the Key Vault
 3. Secrets are retrieved securely in notebooks via:
-```python
+
 dbutils.secrets.get(scope="adls_scope", key="adls-client-secret")
+
+
+---
+
+## 🧩 Workflow Orchestration: Databricks Jobs + DLT
+
+This project is orchestrated using a **Unified Databricks Job** that coordinates batch, streaming, AI, and dashboard tasks in sequence — just like an enterprise-grade data platform.
+
+### 📌 Job: `Unified_Workflow_Job`
+
+This job runs 6 key notebooks in order:
+
+1. `DLT_streaming_data` → Triggers DLT pipeline (`pl_streaming_data_to_silver`)
+2. `task_ingest_batch_data` → Ingests batch files to Silver
+3. `batch_and_stream_processing` → Joins batch + stream data → writes to Gold
+4. `optimize_gold_and_create_view` → Optimizes Gold & builds view for SQL/GPT
+5. `gpt_summary` → Sends query results to GPT-3.5 and stores natural language insights
+6. `update_dashboard` → Final dashboard update using latest data + GPT summary
+
+📍 You can find the job here:  
+[`job_definitions/Unified_Workflow_Job`](job_definitions/Unified_Workflow_Job)
+
+---
+
+### 🔁 DLT Pipeline: `pl_streaming_data_to_silver`
+
+This Delta Live Tables (DLT) pipeline is responsible for:
+
+- Auto-ingesting streaming sales transactions
+- Cleaning, validating, deduplicating
+- Writing clean output to the **Silver layer**
+
+📍 Defined inside:  
+[`auto_ingestion_layer/01_streaming_to_silver`](auto_ingestion_layer/01_streaming_to_silver)
+
+📍 Pipeline definition:  
+[`dlt_pipeline/pl_streaming_data_to_silver`](dlt_pipeline/pl_streaming_data_to_silver)
+
+---
+
+> ✅ This fully automated workflow mimics how real-time pipelines are deployed at scale in top tech/data teams.
 
 
 
