@@ -130,7 +130,7 @@ This project follows security best practices by using **Azure Key Vault** + **Da
 1. **Azure Key Vault** holds all sensitive secrets
 2. A **Databricks Secret Scope** is configured to connect to the Key Vault
 3. Secrets are retrieved securely in notebooks via:
-
+```python   
 dbutils.secrets.get(scope="adls_scope", key="adls-client-secret")
 
 
