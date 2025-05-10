@@ -46,3 +46,43 @@ This project follows a modern **Lakehouse + AI design pattern** built on Databri
 
 ![Project Architecture](real_time_dashboard/ArchitectureDiagram.png)
 
+---
+
+## 🌟 Key Features
+
+This project showcases the most in-demand, real-world features companies expect from modern data engineers:
+
+### ⚙️ Hybrid Ingestion Layer
+- 🔄 Simulates **both batch and streaming data**
+- ⬅️ Batch data is ingested using PySpark and stored in Bronze (Parquet)
+- 🌊 Streaming data is ingested using **Delta Live Tables (DLT)**
+
+### 🧹 Multi-Layer Lakehouse Architecture (Bronze → Silver → Gold)
+- 💾 Raw → Cleaned → Enriched data flow using **Delta format**
+- 🧠 Gold layer includes reporting-specific columns (total revenue, year/month/day)
+
+### 🧠 AI-Driven Insight Generation
+- 🤖 Uses **OpenAI GPT-3.5** to auto-generate sales summaries from Gold layer
+- 🔐 API key is secured with **Azure Key Vault + Databricks Secret Scope**
+- 💬 Summaries saved to Delta table for real-time dashboard embedding
+
+### 📊 Real-Time Analytics Dashboard
+- 📉 Databricks SQL dashboard with:
+  - Revenue trends over time
+  - Sales by category and store
+  - Top 10 best-selling products
+  - 🧠 GPT-generated sales summary box
+
+### 🔐 Enterprise-Grade Security
+- 🔑 OAuth-based mounting via **Azure Key Vault**
+- 🧾 Secret scopes hide all credentials and tokens
+
+### 🧩 End-to-End Orchestration
+- 🔁 Unified **Databricks Job** executes entire workflow:
+  - Batch ingestion
+  - Streaming pipeline (DLT)
+  - Silver → Gold → GPT → Dashboard
+- 🔄 Can be **scheduled or triggered** on demand
+
+
+
