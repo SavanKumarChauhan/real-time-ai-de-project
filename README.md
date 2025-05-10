@@ -44,5 +44,5 @@ This project follows a modern **Lakehouse + AI design pattern** built on Databri
 
 ### 📌 Architecture Diagram
 
-![Project Architecture](real_time_dashboard/Architecture Diagram.png)
+![Project Architecture](real_time_dashboard/ArchitectureDiagram.png)
 
