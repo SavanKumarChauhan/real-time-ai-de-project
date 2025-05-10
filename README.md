@@ -90,24 +90,25 @@ This project showcases the most in-demand, real-world features companies expect 
 
 Below are the core notebooks used in the **Unified Workflow Job** — each playing a specific role in ingestion, transformation, AI, and analytics.
 
-| 📓 Notebook Name | 📂 Path | ⚙️ Description |
-|------------------|--------|---------------|
-| `01_streaming_to_silver` | real_time_ai_de_project/auto_ingestion_layer/01_streaming_to_silver.ipynb | Streaming sales ingestion via **DLT**, saves to Silver layer |
-| `01_batch_ingestion_bronze_to_silver` | `03_data_ingestion/01_batch_ingestion_bronze_to_silver` | Ingests and transforms batch data (products, stores, promos, sales) to Silver |
-| `01_batch_and_stream_processing` | `real_time_ai_de_project/01_batch_and_stream_processing` | Joins batch & stream Silver data → builds enriched Gold table |
-| `02_gold_optimization_and_view` | `04_gold_layer_creation/02_gold_optimization_and_view` | Optimizes Gold layer and prepares SQL views |
-| `01_gpt_summary_generator` | `05_ai_insights_layer/01_gpt_summary_generator` | Generates GPT summary from Gold layer using OpenAI API |
-| `03_realtime_dashboard` | `analytics_layer/03_realtime_dashboard` | Builds real-time Databricks dashboard (charts + GPT box) |
+| 📓 Notebook | 📂 Path | ⚙️ Description |
+|------------|---------|----------------|
+| `01_streaming_to_silver` | [`auto_ingestion_layer/01_streaming_to_silver`](real_time_ai_de_project/auto_ingestion_layer   /01_streaming_to_silver.ipynb) | Streaming sales ingestion via **DLT**, saves to Silver layer |
+| `01_batch_ingestion_bronze_to_silver` | [`03_data_ingestion/01_batch_ingestion_bronze_to_silver`](/03_data_ingestion/01_batch_ingestion_bronze_to_silver) | Ingests and transforms batch data (products, stores, promos, sales) to Silver |
+| `01_batch_and_stream_processing` | [`real_time_ai_de_project/01_batch_and_stream_processing`](/real_time_ai_de_project/01_batch_and_stream_processing) | Joins batch & stream Silver data → builds enriched Gold table |
+| `02_gold_optimization_and_view` | [`04_gold_layer_creation/02_gold_optimization_and_view`](/04_gold_layer_creation/02_gold_optimization_and_view) | Optimizes Gold layer and prepares SQL views |
+| `01_gpt_summary_generator` | [`05_ai_insights_layer/01_gpt_summary_generator`](/05_ai_insights_layer/01_gpt_summary_generator) | Generates GPT summary from Gold layer using OpenAI API |
+| `03_realtime_dashboard` | [`analytics_layer/03_realtime_dashboard`](/analytics_layer/03_realtime_dashboard) | Builds real-time Databricks dashboard (charts + GPT summary) |
 
 ---
 
 ### 🛠️ Additional Notebook
 
-| 📓 Notebook Name | 📂 Path | ⚙️ Description |
-|------------------|--------|---------------|
-| `01_env_config` | `real_time_ai_de_project/01_env_config` | Mounts ADLS containers securely using **Azure Key Vault + OAuth** |
+| 📓 Notebook | 📂 Path | ⚙️ Description |
+|------------|---------|----------------|
+| `01_env_config` | [`real_time_ai_de_project/01_env_config`](/real_time_ai_de_project/01_env_config) | Mounts ADLS containers securely using **Azure Key Vault + OAuth** |
 
 > 🧪 **Note:** Other notebooks in the repo are for testing/debugging only — not part of the production pipeline.
+
 
 
 
