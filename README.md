@@ -1,4 +1,4 @@
-# ⚡ Real-Time AI-Powered Data Engineering Pipeline with Databricks & GPT
+# Real-Time AI-Powered Data Engineering Pipeline with Databricks & GPT
 
 This open-source project showcases a **real-time, AI-enhanced data pipeline** built using the **modern Lakehouse architecture** on **Azure Databricks**. It simulates both **batch and streaming data**, processes it through **Bronze → Silver → Gold layers**, integrates **OpenAI’s GPT** to generate smart sales summaries, and finally renders everything in a live **Databricks dashboard**.
 
